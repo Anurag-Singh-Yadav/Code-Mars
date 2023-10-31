@@ -6,6 +6,7 @@ import { toast } from "react-toastify";
 const baseUrl = import.meta.env.VITE_REACT_APP_BASE_URL;
 const signup = import.meta.env.VITE_REACT_APP_IS_SIGN_UP;
 
+
 function AccountVerification({ formData ,setIssubmitted}) {
   const [disabled, setDisabled] = useState(false);
   const [otp, setOtp] = useState(["", "", "", "", "", ""]);
@@ -21,7 +22,6 @@ function AccountVerification({ formData ,setIssubmitted}) {
       navigate('/login');
     } catch (e) {
       const { data } = e.response;
-      // console.log("sign-up failed", data);
       setDisabled(false);
       if (data.message === "Entered OTP is incorrect") {
         toast.error("Please Enter correct OTP");
