@@ -6,7 +6,7 @@ import linkedin from './images/linkedin.png';
 import machineLearning from './images/machineLearning.png';
 import placement from './images/placement.png';
 import webDev from './images/webDev.png';
-import youTube from './images/youTube.png';
+import youTube from './images/youtube.png';
 import cfIcon from './images/cfIcon.jpeg.jpg';
 import twitter from './images/twitter.png';
 import aboutLogo from './images/aboutLogo.png';
