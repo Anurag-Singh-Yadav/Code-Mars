@@ -9,7 +9,7 @@ import webDev from './images/webDev.png';
 import youTube from './images/youtube.png';
 import cfIcon from './images/cfIcon.jpeg.jpg';
 import twitter from './images/twitter.png';
-import aboutLogo from './images/aboutLogo.png';
+import aboutLogo from './images/aboutlogo.png';
 const assets = {
     logo: logo,
     dsa: dsa,
