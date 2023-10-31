@@ -1,0 +1,31 @@
+/* .unsolved {
+  background: linear-gradient(#ffffff, #c7dace);
+} */
+
+.unsolved{
+  background-color: #F5F7F8;
+}
+/* .solved{
+  background-image: linear-gradient(to right top, #4bd25c, #63d950, #7adf41, #91e62f, #a8eb12);
+} */
+
+
+.solved {
+  background: linear-gradient(#ffffff, #25fa04ce);
+}
+
+.hard{
+    background: linear-gradient(#f90303 , #cb7b7b)
+}
+.total{
+    background: linear-gradient(#ffffff , #c7dace)
+}
+.medium{
+    background: linear-gradient(#ffffff , #d7e148)
+}
+.easy{
+    background: linear-gradient(#269325 , #06fb02);
+    color:white;
+    
+}
+

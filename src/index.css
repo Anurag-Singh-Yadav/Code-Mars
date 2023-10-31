@@ -1,0 +1,61 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Roboto:wght@400;700&display=swap');
+
+
+:root {
+    --primaray-text-color: #183b56;
+    --secondary-text-color: #577592;
+    --accent-color: #2294ed;
+    --accent-color-dark: #1d69a3;
+    --padding-inline-section: 20px;
+}
+
+body {
+    font-family: 'poppins', sans-serif;
+    color: var(--primaray-text-color);
+}
+
+.h1 {
+    font-size: 3rem;
+}
+
+.h2 {
+    font-size: 2rem;
+}
+
+.h3 {
+    font-size: 1.5rem;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    color: var(--secondary-text-color);
+    line-height: 1.8rem;
+}
+
+.banner-text {
+    background-image: url(./assets/topbanner.png);
+    background-color: #4fb3d4;
+    color: white;
+    padding: 10px 30px;
+    background-size: 300px;
+    text-align: center;
+}
+.primary-btn {
+    background-color: #4c8126;
+    color: white;
+    border: 2px solid #4c8126;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    font-weight: 700;
+
+}
+
+.primary-btn:hover {
+    background-color: white;
+    color: #4c8126;
+    cursor: pointer;
+}

@@ -1,0 +1,10 @@
+.wrong{
+    background: linear-gradient(#ffffff , #986969)
+}
+.correct{
+    background: linear-gradient(#ffffff,#25fa04ce)
+}
+.active{
+    background: #313866;
+    color: white;
+}

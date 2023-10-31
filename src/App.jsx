@@ -1,0 +1,18 @@
+import { Route, Routes } from 'react-router'
+import './App.css'
+import User from './components/user/User'
+import Admin from './components/admin/Admin'
+import UserRequestAddQuestion from './components/user/UserRequestAddQuestion'
+
+function App() {
+  return (
+    <div className='w-full'>
+        <Routes>
+          <Route path='*' element={<User/>}></Route>
+          <Route path='/admin' element={<UserRequestAddQuestion/>}></Route>
+        </Routes>
+    </div>
+  )
+}
+
+export default App

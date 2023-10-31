@@ -1,0 +1,12 @@
+.image-container {
+    width: 17rem;  /* Adjust the width as needed */
+    height: 17rem; /* Adjust the height as needed */
+    /* overflow: hidden; Hide any overflow beyond the specified dimensions */
+  }
+  
+  .image {
+    width: 100%; /* Make the image fill the container */
+    height: 100%; /* Make the image fill the container */
+    object-fit: cover; /* Maintain aspect ratio and cover the area */
+  }
+  
