@@ -20,7 +20,7 @@ function Navbar({ isLogin }) {
           In the kingdom of code, you are the ruler of your creations. Welcome!
         </div>
       )}
-      <nav className="flex justify-between items-center bg-navcolor text-white px-inlineSection py-1 w-full">
+      <nav className="flex justify-between items-center bg-navcolor text-white px-inlineSection py-1 mt-0 w-full">
         <div className="flex ml-10 items-center">
           <NavLink to="/">
             <img src={assets.logo} alt="logo" className="w-20" />

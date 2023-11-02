@@ -15,6 +15,7 @@ function LineProgressTracker({ type, qCount, totalQCount, color }) {
           ></div>
         </div>
       </div>
+      
 
       <div
         style={{ backgroundColor: color }}

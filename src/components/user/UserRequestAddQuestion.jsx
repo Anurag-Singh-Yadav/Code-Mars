@@ -18,7 +18,7 @@ const UserRequestAddQuestion = () => {
     difficulty: "",
     main: [""],
     mainAnswer: [""],
-    tags:[""],
+    tags:[],
   });
 
   const changeHandler = (name, value) => {
@@ -80,7 +80,10 @@ const UserRequestAddQuestion = () => {
     try{ 
       formData.difficulty = selectedDifficulty;
       console.log(formData);
-      const response = await axios.post('http://localhost:4000/admin/pushDirect',formData)
+
+      const response = await axios.post(import.meta.env.VITE_REACT_APP_GET_ADMIN_PUSH_QUES,formData)
+      const adi = await axios.post(import.meta.env.VITE_REACT_APP_GET_ADIT_PUSH_QUES,formData);
+
       console.log(response);
       toast.success("Question Added Successfully");
     }catch(e){
@@ -113,7 +116,7 @@ const UserRequestAddQuestion = () => {
           onDifficultyChange={handleDifficultyChange}
         />
           <label htmlFor="description">Question Description</label>
-          <textarea id="description" type='text' name="description" value={formData.description} placeholder="Enter Question Description" onChange={descriptionChange}></textarea>
+          <textarea id="description" type='text' className="px-4" name="description" value={formData.description} placeholder="Enter Question Description" onChange={descriptionChange}></textarea>
           <InputField
           heading="Constraints"
           type='text'

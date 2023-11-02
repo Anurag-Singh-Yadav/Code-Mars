@@ -10,9 +10,9 @@ const Footer = () => {
   }
 
   return (
-    <footer className="bg-navcolor pt-10 sm:mt-10">
+    <footer className="bg-navcolor  pt-10 sm:mt-10">
       <div className="max-w-6xl m-auto text-gray-800 flex flex-wrap justify-left">
-        {/* Column 1 */}
+        
         <div className="p-5 w-1/2 sm:w-4/12 md:w-3/12">
           {/* logo */}
           <div className="text-white"><img src={assets.logo} className="w-12"></img></div>
@@ -80,7 +80,7 @@ const Footer = () => {
           </a>
         </div>
 
-        <div className="p-5 w-1/2 sm:w-4/12 md:w-3/12">
+        <div className="p-5 w-1/2 sm:w-5 md:w-3/12">
           <form className='' onSubmit={submitHandler}>
               <label htmlFor='feedback' className='text-white'>Send us your feedback:</label>
               <textarea id='feedback' className='bg-navcolor text-white p-2 mt-3 border-2 border-white ' placeholder='Enter feedback here...' />
@@ -90,7 +90,6 @@ const Footer = () => {
 
       </div>
 
-      {/* Bottom */}
       <BottomFooter/>
 
     </footer>

@@ -10,6 +10,7 @@ import Cookies from "js-cookie";
 import { toast } from "react-toastify";
 import MySubmission from "./MySubmission";
 import Discuss from "./Discuss";
+import BottomFooter from "../user/homePageComponent/BottomFooter";
 const getQuestion = import.meta.env.VITE_REACT_APP_GET_QUESTION;
 const baseUrl = import.meta.env.VITE_REACT_APP_BASE_URL;
 const runCode = import.meta.env.VITE_REACT_APP_CODE_OUTPUT;
@@ -26,6 +27,7 @@ function Ide() {
   const [customInput, setCustomInput] = useState('');
   const [customOutput, setCustomOutput] = useState('');
   const [title,setTitle] = useState('');
+
   async function fetchQuestion(id) {
     console.log(`${baseUrl}${getQuestion}/${id.id}`);
     console.log(id.id);
@@ -122,7 +124,7 @@ function Ide() {
   }
 
   return (
-    <div className="px-4 pl-6 mb-4">
+    <div className="px-4 pl-6 min-h-[100vh]">
       {!question && <Loading />}
       {question && (
         <div>
@@ -138,7 +140,7 @@ function Ide() {
               ></CodeEditor>
             </div>
           ) : (
-            <div className="grid grid-cols-2">
+            <div className="grid grid-cols-1 md:grid-cols-2">
               <div className="">
                 <IdeNavbar setCurrTab={setCurrTab} currTab={currTab}></IdeNavbar>
                 
@@ -164,8 +166,8 @@ function Ide() {
                   code={code}
                 ></CodeEditor>
                 <div className="flex justify-between items-center mr-1">
-                  <button onClick={runHandler} className="easy text-white py-1 px-3 rounded-md">Run Code</button>
-                  <button onClick={submitHandler} className="bg-navcolor text-white py-1 px-3 rounded-md">Submit Code</button>
+                  <button onClick={runHandler} className={`easy text-white py-1 px-3 rounded-md ${showSpinner ? "cursor-not-allowed":""}`}>Run Code</button>
+                  <button onClick={submitHandler} className={`bg-navcolor text-white py-1 px-3 rounded-md ${showSpinner ? "cursor-not-allowed":''}`}>Submit Code</button>
                 </div>
                   {
                     showSpinner && <Spinner></Spinner>

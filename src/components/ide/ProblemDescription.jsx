@@ -1,4 +1,5 @@
 import React from "react";
+import IdeMobileNavbar from "./IdeMobileNavbar";
 
 function ProblemDescription({ question,obj }) {
   const { title, description, sample, sampleAnswer, author, difficulty } =
@@ -10,9 +11,14 @@ function ProblemDescription({ question,obj }) {
       } = obj;
   return (
     <div className="my-6 flex flex-col gap-1">
+      <div className="flex justify-between items-center">
       <div className="t text-2xl font-serif font-bold">{title}</div>
+      <div className="md:hidden">
+        <IdeMobileNavbar></IdeMobileNavbar>
+      </div>
+      </div>
       <div>Author : {author}</div>
-      <span className="easy text-sm px-2 w-14 py-1 rounded-md text-white">{difficulty}</span>
+      <span className={`text-sm px-2 py-1 w-fit rounded-md ${difficulty}`}>{difficulty}</span>
       <div className="font-medium">{description}</div>
       <div className="font-semibold">Sample input</div>
       <div>{sample}</div>

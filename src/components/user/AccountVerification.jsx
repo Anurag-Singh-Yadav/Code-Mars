@@ -27,6 +27,7 @@ function AccountVerification({ formData ,setIssubmitted}) {
         toast.error("Please Enter correct OTP");
         return;
       }
+      console.log(e);
       setIssubmitted(false);
       navigate("/signup");
     }

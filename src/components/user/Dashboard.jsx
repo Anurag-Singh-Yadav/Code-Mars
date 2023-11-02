@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import Cookies from "js-cookie";
+
 import UserInfo from "./dashboard/UserInfo";
 import SolvedQuestions from "./dashboard/SolvedQuestions";
 import Rank from "./dashboard/Rank";
@@ -21,6 +22,8 @@ function Dashboard({ setIsLogin }) {
   const [typeQuestion, setTypeQuestion] = useState(null);
   const [questionSolvedByUser, setQuestionSolvedByUser] = useState(null);
   const [userProfile, setUserProfile] = useState(null);
+  const [totalUser, setTotalUser] = useState(null);
+  
   useEffect(() => {
     async function getUserInfo() {
       try {
@@ -28,7 +31,7 @@ function Dashboard({ setIsLogin }) {
         const response = await axios.get(
           `${baseUrl}${userDetailsUrl}/${userHandle}`
         );
-        // console.log("getting user deatials", response.data.response.totalData);
+        console.log("getting user deatials", response.data.response);
         setTotal(response.data.response.total);
         setTypeQuestion(response.data.response.typeQuestions);
         setQuestionSolvedByUser(response.data.response.questionSolvedByUser);
@@ -36,6 +39,7 @@ function Dashboard({ setIsLogin }) {
         setUserDetails(response.data.response.userDetails);
         setTypeQuestion(response.data.response.typeQuestions);
         setTotalData(response.data.response.totalData);
+        setTotalUser(response.data.response.totalData.totalUser);
       } catch (e) {
         console.log("gtting section", e);
       }
@@ -55,19 +59,22 @@ function Dashboard({ setIsLogin }) {
     hard = typeQuestion.hard;
   }
   return (
-    <div className=" bg-mainbg">
-      <div className="px-6 py-2 grid grid-cols-4 gap-2">
+
+    <div className="bg-mainbg">
+      <div className="px-6 py-2 grid sm:grid-cols-2 md:grid-cols-4 gap-2 grid-cols-1">
         <UserInfo
           userProfile={userProfile}
           userDetails={userDetails}
           userHandle={userHandle}
+          totalUser={totalUser}
           rankNumber={totalData.rank}
+          userFullName = {totalData.userFullName}
           setIsLogin={setIsLogin}
         ></UserInfo>
 
         <div className="col-span-3 shadow-[rgba(17,_17,_26,_0.1)_0px_0px_16px] p-3">
-          <div className="flex">
-            <div className="shadow-[rgba(50,50,93,0.25)_0px_6px_12px_-2px,_rgba(0,0,0,0.3)_0px_3px_7px_-3px] rounded-md">
+          <div className="flex flex-wrap">
+            <div className="shadow-[rgba(50,50,93,0.25)_0px_6px_12px_-2px,_rgba(0,0,0,0.3)_0px_3px_7px_-3px] rounded-md max-w-full">
               <PieChart data={data}></PieChart>
             </div>
 

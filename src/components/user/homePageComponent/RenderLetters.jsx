@@ -30,7 +30,7 @@ function RenderLetters() {
 
   return (
     <div>
-      <p className='font-extrabold h1 mt-7 h-10  text-navcolor'>{text}</p>
+      <p className='font-extrabold h1 mt-7 h-10 text-navcolor'>{text}</p>
     </div>
   );
 }

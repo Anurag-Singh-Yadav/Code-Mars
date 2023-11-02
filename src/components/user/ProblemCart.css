@@ -15,17 +15,18 @@
 }
 
 .hard{
-    background: linear-gradient(#f90303 , #cb7b7b)
+    background: linear-gradient(#f90303 , #cb7b7b);
+    color:white;
 }
 .total{
     background: linear-gradient(#ffffff , #c7dace)
 }
 .medium{
-    background: linear-gradient(#ffffff , #d7e148)
-}
+    background: linear-gradient(#ffffff , #d7e148);
+    color:black;
+  }
 .easy{
     background: linear-gradient(#269325 , #06fb02);
     color:white;
-    
 }
 

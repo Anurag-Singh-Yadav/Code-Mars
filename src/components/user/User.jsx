@@ -8,11 +8,11 @@ import UserRequestAddQuestion from "./UserRequestAddQuestion";
 import Login from "../Login";
 import Navbar from "./Navbar";
 import Signup from "../Signup";
+import EditProfile from "./EditProfile";
 import ForgetPassword from "./ForgetPassword";
 import RestPassword from "./RestPassword";
 import axios from "axios";
 import Ide from "../ide/Ide";
-import EditProfile from "./EditProfile";
 const baseUrl = import.meta.env.VITE_REACT_APP_BASE_URL;
 const userVerification = import.meta.env.VITE_REACT_APP_IS_USER_VERIFICATION;
 export default function User() {
@@ -37,7 +37,6 @@ export default function User() {
   },[isLogin])
   return (
     <div>
-      
       <Navbar isLogin={isLogin}></Navbar>
       <Routes>
         <Route path="/" element={<Home/>} />

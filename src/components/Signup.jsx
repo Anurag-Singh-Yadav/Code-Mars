@@ -44,20 +44,21 @@ const Signup = () => {
     const {email} = formData;
     const check = await axios.post(`${baseUrl}${isUserExist}`, formData); 
     const response = await axios.post(`${baseUrl}${sendopt}`, {email});
+    console.log(response);
     setIssubmitted(true);
   }catch(e){
     setDisabled(false);
-      console.log('error in getting user',e.response.data);
-      toast.info('User already exist!');
-      navigate('/login');
-      return;
+    console.log('error in getting user',e.response.data);
+    toast.info('User already exist!');
+    navigate('/login');
+    return;
     }
   };
 
   return (
     <div className="bg-mainbg h-[87vh] py-1">
       {
-        (issubmitted ) ?(<AccountVerification formData={formData} setIssubmitted={setIssubmitted}></AccountVerification>):(<form 
+        (issubmitted ) ?(<AccountVerification setDisabled={setDisabled} formData={formData} setIssubmitted={setIssubmitted}></AccountVerification>):(<form 
           onSubmit={handleSubmit}
           className="max-w-md signup  mx-auto mt-5 bg-navcolor rounded-lg text-white"
         >

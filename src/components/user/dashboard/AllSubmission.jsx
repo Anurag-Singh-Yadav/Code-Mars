@@ -6,6 +6,7 @@ function AllSubmission({ questionSolvedByUser }) {
     const navigate = useNavigate();
     const [currentPage, setCurrentPage] = useState(0);
 
+    
     const itemsPerPage = 5;
     const startIndex = currentPage * itemsPerPage;
     const endIndex = startIndex + itemsPerPage;

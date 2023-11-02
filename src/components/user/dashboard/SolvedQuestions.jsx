@@ -3,6 +3,7 @@ import PieChart from "./PieChart";
 import CircularPercentageGraph from "./CircularPercentageGraph";
 import LineProgressTracker from "./LineProgressTracker";
 
+
 function SolvedQuestions({ typeQuestion, total, totalData }) {
   let data;
   const { totalEasy, totalMedium, totalHard, rank, totalUser } = totalData;
@@ -22,12 +23,12 @@ function SolvedQuestions({ typeQuestion, total, totalData }) {
   }
 
   return (
-    <div className="flex justify-between items-center  px-6 bg-navcolor text-white  gap-3 shadow-[rgba(50,50,93,0.25)_0px_6px_12px_-2px,_rgba(0,0,0,0.3)_0px_3px_7px_-3px] rounded-md w-full">
+    <div className="flex flex-wrap justify-between items-center px-4 bg-navcolor text-white shadow-[rgba(50,50,93,0.25)_0px_6px_12px_-2px,_rgba(0,0,0,0.3)_0px_3px_7px_-3px] rounded-md">
       <div className="">
         <CircularPercentageGraph percentage={percentage} />
       </div>
 
-      <div className="flex flex-col gap-1  justify-center items-start min-w-[80px]">
+      <div className="flex flex-wrap flex-col gap-1  justify-center items-start">
         <LineProgressTracker
           color={"#2cbb5d"}
           type={"Easy"}

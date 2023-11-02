@@ -5,10 +5,11 @@ import 'react-circular-progressbar/dist/styles.css';
 const CircularPercentageGraph = ({ percentage }) => {
   console.log(percentage);
   return (
+    
     <div className="circular-graph w-[70%] pt-5 pl-6">
       <CircularProgressbar
         value={percentage}
-        text={`${!percentage ? 0 :percentage}%`}
+        text={`${!percentage ? 0 :percentage.toFixed(2)}%`}
         styles={buildStyles({
           textColor: '#ffffff', // Text color
           pathColor: `#007BFF`, // Circular path color
