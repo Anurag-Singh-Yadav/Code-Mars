@@ -146,14 +146,14 @@ function Ide() {
                 
                 {
                   currTab == "description" && 
-                    <ProblemDescription question={question} obj={obj}></ProblemDescription>
+                    <ProblemDescription currTab={currTab} setCurrTab={setCurrTab} question={question} obj={obj}></ProblemDescription>
                 }
                 
 
                 {currTab == 'mySubmission' && 
-                <MySubmission qid={id.id}></MySubmission>}
+                <MySubmission currTab={currTab} setCurrTab={setCurrTab} question={question} qid={id.id}></MySubmission>}
 
-                 {currTab == "discuss" && <Discuss qid={id.id}></Discuss> }
+                 {currTab == "discuss" && <Discuss currTab={currTab} setCurrTab={setCurrTab} question={question} qid={id.id}></Discuss> }
 
               </div>
               <div>

@@ -2,7 +2,7 @@ import React from 'react'
 import { Popover, Transition } from "@headlessui/react";
 import { Fragment } from "react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-function IdeMobileNavbar() {
+function IdeMobileNavbar({currTab,setCurrTab}) {
   return (
     <div className="">
     <Popover className="bg-[#e4ecff]">
@@ -44,9 +44,24 @@ function IdeMobileNavbar() {
             </div>
             <div className="px-5 py-2">
               <div className="grid grid-cols-1 gap-3  text-[1rem] font-[500]">
-                  <div>Descriptions</div>
-                  <div>Discuss</div>
-                  <div>My Submission</div>
+                  <div onClick={() => setCurrTab("description")} className={`${
+            currTab === "description"
+              ? "active"
+              : "hover:bg-gray-500 hover:text-white"
+          }`}>Descriptions</div>
+                  <div onClick={() => setCurrTab("discuss")}
+                    className={`currTab === "discuss"
+                    ? "active"
+                    : "hover:bg-gray-500 hover:text-white"
+                }`}
+                  >Discuss</div>
+                  <div onClick={() => setCurrTab("mySubmission")} 
+                    className={`${
+                        currTab === "mySubmission"
+                          ? "active"
+                          : "hover:bg-gray-500 hover:text-white"
+                      }`}
+                  >My Submission</div>
               </div>
             </div>
           </div>

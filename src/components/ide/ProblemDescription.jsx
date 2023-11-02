@@ -1,7 +1,7 @@
 import React from "react";
 import IdeMobileNavbar from "./IdeMobileNavbar";
 
-function ProblemDescription({ question,obj }) {
+function ProblemDescription({ question,obj,currTab,setCurrTab }) {
   const { title, description, sample, sampleAnswer, author, difficulty } =
     question;
     const {
@@ -14,7 +14,7 @@ function ProblemDescription({ question,obj }) {
       <div className="flex justify-between items-center">
       <div className="t text-2xl font-serif font-bold">{title}</div>
       <div className="md:hidden">
-        <IdeMobileNavbar></IdeMobileNavbar>
+        <IdeMobileNavbar currTab={currTab}setCurrTab={setCurrTab} ></IdeMobileNavbar>
       </div>
       </div>
       <div>Author : {author}</div>

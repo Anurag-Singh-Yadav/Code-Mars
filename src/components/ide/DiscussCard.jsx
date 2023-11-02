@@ -5,7 +5,7 @@ import { AiFillDelete } from "react-icons/ai";
 import { toast } from "react-toastify";
 const baseUrl = import.meta.env.VITE_REACT_APP_BASE_URL;
 const deletePostUrl = import.meta.env.VITE_REACT_APP_DELETE_DISCUSSION;
-function DiscussCard({ data,temp,setTemp }) {
+function DiscussCard({ data,temp,setTemp,currTab,setCurrTab }) {
   const { title, body, date, userHandle, _id } = data;
   const user = Cookies.get("userHandle");
     async function deletePost(){

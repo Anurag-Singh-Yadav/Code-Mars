@@ -5,10 +5,11 @@ import Spinner from "./Spinner";
 import Cookies from "js-cookie";
 import { useNavigate } from "react-router";
 import { toast } from "react-toastify";
+import IdeMobileNavbar from "./IdeMobileNavbar";
 const baseUrl = import.meta.env.VITE_REACT_APP_BASE_URL;
 const getDiscussUrl = import.meta.env.VITE_REACT_APP_DESCUSSION;
 const postDiscussUrl = import.meta.env.VITE_REACT_APP_POST_DISCUSSION;
-function Discuss({ qid }) {
+function Discuss({ qid,currTab,setCurrTab }) {
     const navigate = useNavigate();
   const [body, setBody] = useState(null);
   const [temp,setTemp] = useState(false);
@@ -100,7 +101,8 @@ function Discuss({ qid }) {
       )}
 
       {!wantPost && (
-        <div className="mt-6 mb-3">
+        <div className="flex justify-between mx-2 pt-2">
+          <div className="mt-6 mb-3">
           Want to share your idea?{" "}
           <button
             className="cursor-pointer bg-navcolor text-white py-1 px-4 rounded-md"
@@ -111,6 +113,8 @@ function Discuss({ qid }) {
           >
             Post
           </button>
+        </div>
+        <IdeMobileNavbar currTab={currTab} setCurrTab={setCurrTab}></IdeMobileNavbar>
         </div>
       )}
 
