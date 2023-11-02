@@ -17,7 +17,6 @@ function Discuss({ qid,currTab,setCurrTab }) {
   useEffect(() => {
     async function getDiscuss() {
       const response = await axios.get(`${baseUrl}${getDiscussUrl}/${qid}`);
-      //   console.log(response);
       setBody(response.data.response);
     }
     
@@ -33,7 +32,6 @@ function Discuss({ qid,currTab,setCurrTab }) {
   async function submitHandler(e) {
     e.preventDefault();
     try {
-      console.log(formData);
       const token = Cookies.get("token");
       const response = await axios.post(
         `${baseUrl}${postDiscussUrl}`,
@@ -49,17 +47,14 @@ function Discuss({ qid,currTab,setCurrTab }) {
           },
         }
       );
-      // console.log(response);
       toast.success("Post Successfully");
       setWantPost(false);
       setTemp(!temp);
     } catch (e) {
-      console.log(e);
       if (e.response?.data?.message?.includes("decoding")) {
         navigate("/login");
       }
       toast.warning("Something Went Wrong, Please Try again!!");
-      console.error(e);
     }
   }
 

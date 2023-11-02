@@ -38,21 +38,18 @@ function UserInfo({
           }
         );
         const { data } = response;
-        console.log("user info section", data);
         if (data.success) {
           if (userHandle === data.user.userHandle) {
             setValid(true);
           }
         }
       } catch (e) {
-        console.log(e);
       }
     }
     checkUserVerification();
   }, []);
 
   function logOutHandler() {
-    console.log("logOutHandler");
     Cookies.remove("token");
     Cookies.remove("userHandle");
     setIsLogin(false);
@@ -107,9 +104,9 @@ function UserInfo({
         {userProfile ? (
           userProfile.map((item, index) => {
             return (
-              <div key={index} className="mt-2 font-medium py-1 px-3">
+              <div key={index} className="mt-2  font-medium flex flex-col gap-8 py-1 px-3">
                 {item[0] != "_id" && item[0] != "__v" && item[1] && (
-                  <div className="flex justify-between px-6">
+                  <div className="flex flex-col py-4 items-center px-6">
                     {item[0] === "Country" && (
                       <span>
                         <IoLocationSharp />
@@ -117,22 +114,24 @@ function UserInfo({
                     )}
                     {item[0] === "LinkedIn" && (
                       <span>
-                        <BsLinkedin />
+                        <a href={item[1]} target="_blank"><BsLinkedin /></a>
                       </span>
                     )}
                     {item[0] === "Github" && (
                       <span>
-                        <BsGithub />
+                        <a href={item[1]} target="_blank"><BsGithub /></a>
+                        
                       </span>
                     )}
                     {item[0] === "Twitter" && (
                       <span>
-                        <BsTwitter />
+                        <a href={item[1]} target="_blank"><BsTwitter /></a>
+                        
                       </span>
                     )}
-                    <span className='italic cursor-pointer'>
+                    {/* <span className='italic cursor-pointer'>
                       {item[1] ? item[1] : "N/A"}
-                    </span>
+                    </span> */}
                   </div>
                 )}
               </div>

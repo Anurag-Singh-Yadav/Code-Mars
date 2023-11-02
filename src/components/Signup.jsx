@@ -44,11 +44,9 @@ const Signup = () => {
     const {email} = formData;
     const check = await axios.post(`${baseUrl}${isUserExist}`, formData); 
     const response = await axios.post(`${baseUrl}${sendopt}`, {email});
-    console.log(response);
     setIssubmitted(true);
   }catch(e){
     setDisabled(false);
-    console.log('error in getting user',e.response.data);
     toast.info('User already exist!');
     navigate('/login');
     return;

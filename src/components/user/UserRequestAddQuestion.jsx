@@ -79,15 +79,9 @@ const UserRequestAddQuestion = () => {
     
     try{ 
       formData.difficulty = selectedDifficulty;
-      console.log(formData);
-      console.log(`${import.meta.env.VITE_REACT_APP_GET_ADMIN_PUSH_QUES}`);
       const response = await axios.post(import.meta.env.VITE_REACT_APP_GET_ADMIN_PUSH_QUES,formData)
-      // const response = await axios.post(import.meta.env.VITE_REACT_APP_GET_ADMIN_PUSH_QUES_LOCAL_HOST,formData)
-      // const adi = await axios.post(import.meta.env.VITE_REACT_APP_GET_ADIT_PUSH_QUES,formData);
-      console.log(response);
       toast.success("Question Added Successfully");
     }catch(e){
-      console.log(e);
       toast.error("Error in Adding Question");
     }
   }

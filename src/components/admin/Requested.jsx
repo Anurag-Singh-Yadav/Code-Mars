@@ -12,9 +12,7 @@ export default function Requested() {
         try{
             const response = await axios.get(`${baseurl}${questionsUrl}`);
             setRequestedQuestions(response);
-            console.log(response);
         }catch(e){
-          console.log(e.message);
         }
     }
 

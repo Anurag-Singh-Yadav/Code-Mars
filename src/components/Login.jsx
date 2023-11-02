@@ -28,12 +28,10 @@ export default function Login({setIsLogin}) {
   async function submitHandler(e) {
     e.preventDefault();
     if (isUser === "Admin") {
-      console.log("i am admin");
       try {
         const response = await axios.post(`${baseurl}${loginAdmin}`, formData);
         const token = response.data.token; // Assuming the token is in response.data.token
         
-        console.log(response);
         Cookies.set("token", token);
         setIsLogin(true);
         navigate('/');
@@ -41,19 +39,15 @@ export default function Login({setIsLogin}) {
 
       }
     } else if (isUser === "Student") {
-      console.log("i am Student");
       try {
         const response = await axios.post(`${baseurl}${loginUser}`, formData);
-        console.log("User login response:", response);
         const token = response.data.token; // Assuming the token is in response.data.token
         const userHandle = response.data.user.userHandle;
-        // console.log(token);
         Cookies.set("userHandle", userHandle);
         Cookies.set("token", token);
         setIsLogin(true);
         navigate('/');
       } catch (e) {
-        console.log("error in login", e.response.data);
         const message = e.response.data.message;
         if(message === "User doesn't exist"){
           toast.info("Please Signup first",{

@@ -18,7 +18,6 @@ function AccountVerification({ formData ,setIssubmitted}) {
       const enteredOtp = otp.join("");
       formData.otp = enteredOtp;
       const response = await axios.post(`${baseUrl}${signup}`, formData);
-      console.log("sign-up successful");
       navigate('/login');
     } catch (e) {
       const { data } = e.response;
@@ -27,7 +26,6 @@ function AccountVerification({ formData ,setIssubmitted}) {
         toast.error("Please Enter correct OTP");
         return;
       }
-      console.log(e);
       setIssubmitted(false);
       navigate("/signup");
     }

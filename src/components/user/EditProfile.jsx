@@ -45,12 +45,10 @@ function EditProfile() {
           }
         );
         const tokenUser = response.data.user.userHandle;
-        // console.log('verification',tokenUser,userHandle);
         if (tokenUser !== urlUserHandle) {
           navigate(`/dashboard/${tokenUser}`);
         }
       } catch (e) {
-        console.log(e);
         navigate("/login");
       }
     }
@@ -66,11 +64,9 @@ function EditProfile() {
 
   async function handleSubmit(e) {
     e.preventDefault();
-    console.log(formData);
     try {
       const token = Cookies.get("token");
       const userHandle = Cookies.get("userHandle");
-      console.log(`${baseUrl}${editUrl}/${userHandle}`);
       const response = await axios.post(
         `${baseUrl}${editUrl}/${userHandle}`,
         formData,

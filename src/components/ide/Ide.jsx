@@ -29,12 +29,9 @@ function Ide() {
   const [title,setTitle] = useState('');
 
   async function fetchQuestion(id) {
-    console.log(`${baseUrl}${getQuestion}/${id.id}`);
-    console.log(id.id);
     const response = await axios.get(`${baseUrl}${getQuestion}/${id.id}`);
     setQuestion(response.data.question);
     setCustomInput(response.data.question.sample);
-    // console.log(response.data.question);
     setTitle(response.data.question.title);
   }
   const obj = {
@@ -64,7 +61,6 @@ function Ide() {
         input:customInput,
         token
       });
-      console.log(response.data);
       setShowSpinner(false);
       setCustomOutput(response.data.message.output);
     } catch (e) {
@@ -75,7 +71,6 @@ function Ide() {
       return;
       }
       toast.warning('Internal Server Error!!');
-      console.error(e);
     }
   }
 
@@ -94,7 +89,6 @@ function Ide() {
         token
       });
       let errorCheck = res.data.message.output.includes("error") || res.data.message.output.includes("Error") || res.data.message.output.includes("ERROR");
-      console.log(res.data.message.output);
 
       if(errorCheck){
         setShowSpinner(false);
@@ -113,12 +107,9 @@ function Ide() {
       });
       setShowSpinner(false);
       setCurrTab('mySubmission');
-      // console.log(response.data);
       const verdict = response.data.verdict;
-      console.log(verdict);
     }catch(e){
       setShowSpinner(false);
-      console.error(e);
     }
 
   }

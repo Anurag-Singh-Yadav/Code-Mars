@@ -9,7 +9,6 @@ function SolvedQuestions({ typeQuestion, total, totalData }) {
   const { totalEasy, totalMedium, totalHard, rank, totalUser } = totalData;
   const percentage = (total / (totalEasy + totalMedium + totalHard)) * 100;
 
-  console.log("total question solved by user", total);
   let easy, medium, hard;
   if (typeQuestion) {
     data = [

@@ -23,10 +23,8 @@ function DiscussCard({ data,temp,setTemp,currTab,setCurrTab }) {
                 },
               }
             );
-            // console.log(response);
             setTemp(!temp);
         }catch(e){
-            // console.log(e);
             toast.error('Something Went Wrong, Please Try again!!');
         }
     }

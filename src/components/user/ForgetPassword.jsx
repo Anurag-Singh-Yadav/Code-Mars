@@ -20,9 +20,7 @@ const ForgetPassword = ({formData,setFormData,setCorrectEmail}) => {
 
   async function submitHandler(e){
     e.preventDefault();
-    console.log(formData);
     if(formData.password !== formData.confirmPassword){
-      console.log('Password not match')
       toast.error('Password not match!', {
         position: "bottom-right",
         autoClose: 1000,
@@ -64,7 +62,6 @@ const ForgetPassword = ({formData,setFormData,setCorrectEmail}) => {
         navigate('/login');
       return;
     }catch(e){
-      console.log(e);
       const {message} = e.response.data;
       if(message === "Entered OTP is incorrect"){
         toast.error("Please Enter Correct OTP Again",{

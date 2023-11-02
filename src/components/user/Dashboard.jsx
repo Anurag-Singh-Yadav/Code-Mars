@@ -14,7 +14,6 @@ const baseUrl = import.meta.env.VITE_REACT_APP_BASE_URL;
 const userDetailsUrl = import.meta.env.VITE_REACT_APP_GET_USER_DETAILS;
 function Dashboard({ setIsLogin }) {
   const { userHandle } = useParams();
-  console.log(userHandle);
   const [qid, setQid] = useState();
   const [totalData, setTotalData] = useState({});
   const [userDetails, setUserDetails] = useState(null);
@@ -27,11 +26,9 @@ function Dashboard({ setIsLogin }) {
   useEffect(() => {
     async function getUserInfo() {
       try {
-        // console.log("url is", `${baseUrl}${userDetailsUrl}/${userHandle}`);
         const response = await axios.get(
           `${baseUrl}${userDetailsUrl}/${userHandle}`
         );
-        console.log("getting user deatials", response.data.response);
         setTotal(response.data.response.total);
         setTypeQuestion(response.data.response.typeQuestions);
         setQuestionSolvedByUser(response.data.response.questionSolvedByUser);
@@ -41,7 +38,6 @@ function Dashboard({ setIsLogin }) {
         setTotalData(response.data.response.totalData);
         setTotalUser(response.data.response.totalData.totalUser);
       } catch (e) {
-        console.log("gtting section", e);
       }
     }
     getUserInfo();

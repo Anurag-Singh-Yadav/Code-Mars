@@ -14,7 +14,6 @@ function MySubmission({ qid, currTab, setCurrTab }) {
   useEffect(() => {
     async function getMySubmission() {
       const token = Cookies.get("token");
-      // console.log(`${baseUrl}${mySubmissionUrl}`);
       try {
         const response = await axios.post(
           `${baseUrl}${mySubmissionUrl}`,
@@ -34,10 +33,8 @@ function MySubmission({ qid, currTab, setCurrTab }) {
           navigate("/login");
           return;
         }
-        // console.log(e);
         toast.error("Something Went wrong");
       }
-      // console.log(response.data.response);
     }
     getMySubmission();
   }, []);

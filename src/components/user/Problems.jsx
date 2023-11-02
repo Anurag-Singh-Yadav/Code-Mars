@@ -43,7 +43,6 @@ function Problems() {
 
   async function getQues() {
     const userHandle = Cookies.get("userHandle");
-    console.log(userHandle);
     const response = await axios.post(`${baseUrl}${getAllQuesAPI}`, {
       userHandle: userHandle,
     });

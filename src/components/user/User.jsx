@@ -18,17 +18,13 @@ const userVerification = import.meta.env.VITE_REACT_APP_IS_USER_VERIFICATION;
 export default function User() {
   const [isLogin, setIsLogin] = useState(false);
   useEffect(()=>{
-    console.log('i am in useffect');
     async function checkValidToken(token) {
       try {
         const response = await axios.post(`${baseUrl}${userVerification}`, {
           token,
         });
-        console.log('logged in :)');
         setIsLogin(true);
       } catch (e) {
-        console.log(e);
-        console.log("token is not present");
         return;
       }
     }

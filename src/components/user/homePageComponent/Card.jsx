@@ -2,7 +2,6 @@ import React from 'react';
 import './Card.css';  // Import the CSS file for styling
 
 function Card({ title, description, icon, link }) {
-    console.log(link);
   return (
     <div className='flex flex-col justify-between items-center bg-navcolor rounded-lg border-2 border-b-4 text-white font-sens hover:scale-105 transition duration-500 py-1 px-2 background-shadow'>
       <div className='image-container flex justify-center items-center'>
