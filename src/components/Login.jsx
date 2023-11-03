@@ -148,7 +148,7 @@ export default function Login({setIsLogin}) {
             Login
           </button>
           <div className="flex justify-between items-center px-2 sm:justify-end">
-            <div className="sm:hidden">Create Account</div>
+            <div className="sm:hidden" onClick={()=>navigate('/signup')}>Create Account</div>
             <NavLink
             to="/account-recovery"
             className="text-right block cursor-pointer text-mainbg"
