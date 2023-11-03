@@ -22,7 +22,7 @@ function SolvedQuestions({ typeQuestion, total, totalData }) {
   }
 
   return (
-    <div className="flex flex-wrap justify-between items-center px-4 bg-navcolor text-white shadow-[rgba(50,50,93,0.25)_0px_6px_12px_-2px,_rgba(0,0,0,0.3)_0px_3px_7px_-3px] rounded-md">
+    <div className="items-center px-4 bg-navcolor text-white shadow-[rgba(50,50,93,0.25)_0px_6px_12px_-2px,_rgba(0,0,0,0.3)_0px_3px_7px_-3px] rounded-md py-6">
       <div className="">
         <CircularPercentageGraph percentage={percentage} />
       </div>

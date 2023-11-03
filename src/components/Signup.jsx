@@ -52,7 +52,6 @@ const Signup = () => {
     return;
     }
   };
-
   return (
     <div className="bg-mainbg h-[87vh] py-1">
       {

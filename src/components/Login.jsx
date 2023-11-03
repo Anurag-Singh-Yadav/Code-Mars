@@ -81,10 +81,10 @@ export default function Login({setIsLogin}) {
   async function forgotPassword(e) {}
 
   return (
-    <div className="bg-mainbg h-[87vh] pt-1 relative">
+    <div className="bg-mainbg h-[100vh] md:h-[94vh] md:py-auto lg:h-[87vh] pt-1 relative">
       <form
         onSubmit={submitHandler}
-        className="flex flex-col loginform w-[35%] mx-auto text-white bg-navcolor gap-4"
+        className="flex flex-col loginform w-[90%] px-5 sm:w-[70%] md:w-[65%] lg:w-[35%] py-4 mx-auto text-white bg-navcolor gap-4"
       >
         <div className="flex pb-2 justify-center gap-4 bg-navcolor items-center">
           <img src={assets.logo} className="w-16"></img>
@@ -144,15 +144,19 @@ export default function Login({setIsLogin}) {
             type="submit"
             className="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold my-2 py-2 px-4 rounded focus:outline-none focus:shadow-outline"
           >
+
             Login
           </button>
-          <NavLink
+          <div className="flex justify-between items-center px-2 sm:justify-end">
+            <div className="sm:hidden">Create Account</div>
+            <NavLink
             to="/account-recovery"
             className="text-right block cursor-pointer text-mainbg"
             onClick={forgotPassword}
           >
             <i>Forgot Password ?</i>
           </NavLink>
+          </div>
         </div>
       </form>
     </div>

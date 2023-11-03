@@ -57,7 +57,8 @@ function Dashboard({ setIsLogin }) {
   return (
 
     <div className="bg-mainbg">
-      <div className="px-6 py-2 grid sm:grid-cols-2 md:grid-cols-4 gap-2 grid-cols-1">
+      <div className="px-6 py-2 flex">
+        <div className=" basis-1/3">
         <UserInfo
           userProfile={userProfile}
           userDetails={userDetails}
@@ -67,10 +68,11 @@ function Dashboard({ setIsLogin }) {
           userFullName = {totalData.userFullName}
           setIsLogin={setIsLogin}
         ></UserInfo>
+        </div>
 
-        <div className="col-span-3 shadow-[rgba(17,_17,_26,_0.1)_0px_0px_16px] p-3">
-          <div className="flex flex-wrap">
-            <div className="shadow-[rgba(50,50,93,0.25)_0px_6px_12px_-2px,_rgba(0,0,0,0.3)_0px_3px_7px_-3px] rounded-md max-w-full">
+        <div className="shadow-[rgba(17,_17,_26,_0.1)_0px_0px_16px] p-3 basis-2/3">
+          <div className="flex w-full">
+            <div className="shadow-[rgba(50,50,93,0.25)_0px_6px_12px_-2px,_rgba(0,0,0,0.3)_0px_3px_7px_-3px] rounded-md w-[100vw] md:w-fit">
               <PieChart data={data}></PieChart>
             </div>
 
@@ -79,16 +81,25 @@ function Dashboard({ setIsLogin }) {
               total={total}
               totalData={totalData}
             ></SolvedQuestions>
-          </div>
 
-          <div className="bg-navcolor text-white text-center px-4 py-2 font-normal rounded-md text-lg my-2">
+<div>
+         
+        </div>
+          </div>
+          <div className="">
+          <div className=" bg-navcolor text-white text-center px-4 py-2 font-normal rounded-md text-lg my-2">
             Recent Submission
           </div>
 
           <AllSubmission
             questionSolvedByUser={questionSolvedByUser}
           ></AllSubmission>
+          </div>
+        
         </div>
+
+       
+
       </div>
       <BottomFooter></BottomFooter>
     </div>

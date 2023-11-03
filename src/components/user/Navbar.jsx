@@ -107,7 +107,7 @@ function Navbar({ isLogin }) {
         </div>
         <div className="items-center hidden sm:flex">
           {!isLogin ? (
-            <div className="space-x-3 hidden md:flex">
+            <div className="space-x-3 hidden sm:flex">
               <NavLink
                 to="/login"
                 className="px-4 py-2 bg-white text-navcolor rounded-lg"

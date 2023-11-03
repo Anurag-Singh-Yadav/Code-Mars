@@ -9,10 +9,11 @@
     flex-direction: column;
     gap: var(--gap);
     margin: 4rem 0;
-    padding: 15px 35px;
+    padding: 15px auto;
     position: relative;
     z-index: 30;
 }
+
 .signup{
     box-shadow: 0 0 40px rgba(8,7,16,.6);
 }
