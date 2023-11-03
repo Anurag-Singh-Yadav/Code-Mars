@@ -13,6 +13,7 @@ import ForgetPassword from "./ForgetPassword";
 import RestPassword from "./RestPassword";
 import axios from "axios";
 import Ide from "../ide/Ide";
+import Contact from "./Contact";
 const baseUrl = import.meta.env.VITE_REACT_APP_BASE_URL;
 const userVerification = import.meta.env.VITE_REACT_APP_IS_USER_VERIFICATION;
 export default function User() {
@@ -45,7 +46,10 @@ export default function User() {
         <Route path="/request-questions" element={<UserRequestAddQuestion />} />
         <Route path="/ide/:id" element={<Ide></Ide>}></Route>
         <Route path="/profile/:userHandle/edit" element={<EditProfile></EditProfile>} />
+        <Route path="/contact" element={<Contact></Contact>}></Route>
+
       </Routes>
     </div>
   );
+
 }
