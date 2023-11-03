@@ -80,8 +80,8 @@ const Footer = () => {
           </a>
         </div>
 
-        <div className="p-5 w-1/2 sm:w-5 md:w-3/12">
-          <form className='' onSubmit={submitHandler}>
+        <div className="p-5 sm:w-5  md:w-3/12">
+          <form className='flex justify-center gap-4 flex-col' onSubmit={submitHandler}>
               <label htmlFor='feedback' className='text-white'>Send us your feedback:</label>
               <textarea id='feedback' className='bg-navcolor text-white p-2 mt-3 border-2 border-white ' placeholder='Enter feedback here...' />
               <input type='submit'  value='Submit' className='text-white block primary-btn py-1 rounded-md px-3'/>
