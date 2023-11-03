@@ -25,9 +25,9 @@ function Navbar({ isLogin }) {
         </div>
       )}
       <nav className="flex justify-between items-center bg-navcolor text-white px-inlineSection py-1 mt-0">
-        <div className="flex ml-10 items-center">
+        <div className="flex sm:ml-10 py-2 sm:py-0 items-center">
           <NavLink to="/">
-            <img src={assets.logo} alt="logo" className="w-20" />
+            <img src={assets.logo} alt="logo" className="w-14 sm:w-20" />
           </NavLink>
         </div>
 

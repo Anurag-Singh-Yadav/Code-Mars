@@ -71,11 +71,11 @@ export default function RestPassword() {
     <div className="bg-mainbg h-[87vh] pt-1 relative">
       {!isCorrectEmail ? (<form
         onSubmit={submitHandler}
-        className="flex flex-col loginform w-[35%] mx-auto text-white bg-navcolor gap-4"
+        className="flex flex-col loginform lg:w-[35%] md:w-[50%] py-4 sm:w-[65%] w-[90%] mx-auto px-5 text-white bg-navcolor gap-4"
       >
         <div className="flex pb-2 justify-center gap-4 bg-navcolor items-center">
           <img src={assets.logo} className="w-16"></img>
-          <div className=" font-bold font-sans text-3xl items-baseline">
+          <div className=" font-normal sm:font-bold font-sans text-2xl sm:text-3xl items-baseline">
             Account Recovery
           </div>
         </div>
