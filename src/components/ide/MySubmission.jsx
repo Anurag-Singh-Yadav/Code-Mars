@@ -44,14 +44,14 @@ function MySubmission({ qid, currTab, setCurrTab }) {
 
       {
       mySubmission && mySubmission.length == 0 && <div className="flex justify-between"><div>No Submission Yet</div>
-      <IdeMobileNavbar currTab={currTab} setCurrTab={setCurrTab} question={question} ></IdeMobileNavbar>
+      <div className="md:hidden"><IdeMobileNavbar currTab={currTab} setCurrTab={setCurrTab} question={question} ></IdeMobileNavbar></div>
       </div>
       }
 
       <div>
       <div className="flex justify-between mx-2 items-center">
         <div className="f font-medium font-sans text-2xl">Your Submission</div>
-      <IdeMobileNavbar currTab={currTab} setCurrTab={setCurrTab} ></IdeMobileNavbar>
+      <div className="md:hidden"><IdeMobileNavbar currTab={currTab} setCurrTab={setCurrTab} ></IdeMobileNavbar></div>
       </div>
       <div className="mt-4 mr-2">
         {mySubmission &&

@@ -109,7 +109,9 @@ function Discuss({ qid,currTab,setCurrTab }) {
             Post
           </button>
         </div>
-        <IdeMobileNavbar currTab={currTab} setCurrTab={setCurrTab}></IdeMobileNavbar>
+        <div className="md:hidden">
+          <IdeMobileNavbar currTab={currTab} setCurrTab={setCurrTab}></IdeMobileNavbar>
+        </div>
         </div>
       )}
 
