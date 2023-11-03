@@ -7,8 +7,8 @@ import {BsLinkedin,BsTwitter} from 'react-icons/bs';
 function Contact() {
   return (
     <div className='relative'>
-    <section>
-      <div className="container">
+    <section className=''>
+      <div className="container ">
         <div className="contactInfo bg-navcolor ml-3 text-white">
           <div>
             <h2>Contact Info</h2>

@@ -40,7 +40,7 @@ section::before
 .container .contactInfo
 {
     position: absolute;
-    top: 40px;
+    top: 10px;
     width: 350px;
     height: calc(100% - 80px);
     z-index: 1;
