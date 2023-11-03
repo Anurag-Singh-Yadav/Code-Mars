@@ -8,7 +8,7 @@ function Card({ title, description, icon, link }) {
         <img className='image md:p-6' src={icon} alt={title} />
       </div>
       <div className='font font-serif font-bold text-2xl py-2 px-4'>{title}</div>
-      <div className='py-2 px-4 font-sans'>{description}</div>
+      <div className='py-2 px-4 font-sans text-gray-700'>{description}</div>
       <a className='bg-navcolor text-white my-2 items-center py-2 px-4 rounded-md font-serif font-semibold text-xl hover:bg-mainbg hover:text-black ' href={link} target='_blank' rel='noopener noreferrer'>Learn more</a>
     </div>
   );

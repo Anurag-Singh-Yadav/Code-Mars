@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./ProblemCart.css";
 import { useNavigate, useParams } from "react-router-dom";
 
+
 function ProblemCart({ question, showTags, index }) {
   const navigate = useNavigate();
  let solvedBg = "unsolved";
@@ -19,9 +20,9 @@ function ProblemCart({ question, showTags, index }) {
       <div className="flex gap-4 items-center">
         <p>{index + 1})</p>
         <p className="font-bold text-xl">{question.title}</p>
-        <p className={`${question.difficulty} rounded-md text-sm px-2 py-1`}>{question.difficulty}</p>
+        <p className={`${question.difficulty} rounded-xl text-sm px-3`}>{question.difficulty}</p>
         {showTags && (
-          <div className="flex gap-2 text-sm text-white">
+          <div className=" flex gap-2 text-sm text-white">
             {question.tags.map((obj, index) => {
               return (
                 index < 10 && (
@@ -39,7 +40,7 @@ function ProblemCart({ question, showTags, index }) {
       </div>
       <div className="flex justify-center items-center">
         <button
-          className="bg-[#3a9b33] text-white px-3 py-1 border-[2px] border-black rounded-2xl font-[600] hover:bg-[#2a6826] ml-2"
+          className="bg-[#3a9b33c6] text-white px-4 py-1 border-[2px] rounded-2xl font-medium hover:bg-[#2a6826] ml-2"
           onClick={clickHandler}
         >
           Solve

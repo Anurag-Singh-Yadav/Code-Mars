@@ -14,19 +14,32 @@
   background: linear-gradient(#ffffff, #25fa04ce);
 }
 
-.hard{
+/* .hard{
     background: linear-gradient(#f90303 , #cb7b7b);
     color:white;
+} */
+.hard{
+  background-color: rgba(255, 0, 0, 0.071);
+  color: red;
+  border: 1.5px solid red;
 }
 .total{
     background: linear-gradient(#ffffff , #c7dace)
 }
+
 .medium{
-    background: linear-gradient(#ffffff , #d7e148);
-    color:black;
+    /* background: linear-gradient(#ffffff , #d7e148);
+    color:black; */
+    background-color: rgba(255, 166, 0, 0.078);
+    color: orange;
+    border: 1.5px solid orange;
+  
   }
 .easy{
-    background: linear-gradient(#269325 , #06fb02);
-    color:white;
+    /* background: linear-gradient(#269325 , #06fb02);
+    color:white; */
+    background-color: rgba(0, 128, 0, 0.082);
+    color: green;
+    border: 1.5px solid green;
 }
 

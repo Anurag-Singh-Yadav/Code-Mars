@@ -122,13 +122,13 @@ function Ide() {
           {fullScreen ? (
             <div>
               <CodeEditor
-                fullScreen={fullScreen}
-                setFullScreen={setFullScreen}
-                setLanguages={setLanguage}
-                language={language}
-                setCode={setCode}
-                code={code}
-              ></CodeEditor>
+                  full={fullScreen}
+                  setFull={setFullScreen}
+                  setLanguage={setLanguage}
+                  language={language}
+                  setCode={setCode}
+                  code={code}
+                ></CodeEditor>
             </div>
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2">
@@ -149,15 +149,15 @@ function Ide() {
               </div>
               <div>
                 <CodeEditor
-                  fullScreen={fullScreen}
-                  setFullScreen={setFullScreen}
-                  setLanguages={setLanguage}
+                  full={fullScreen}
+                  setFull={setFullScreen}
+                  setLanguage={setLanguage}
                   language={language}
                   setCode={setCode}
                   code={code}
                 ></CodeEditor>
-                <div className="flex justify-between items-center mr-1">
-                  <button onClick={runHandler} className={`easy text-white py-1 px-3 rounded-md ${showSpinner ? "cursor-not-allowed":""}`}>Run Code</button>
+                <div className="flex justify-between items-center mx-1 my-4">
+                  <button onClick={runHandler} className={`easy text-green py-1 px-3 rounded-md ${showSpinner ? "cursor-not-allowed":""}`}>Run Code</button>
                   <button onClick={submitHandler} className={`bg-navcolor text-white py-1 px-3 rounded-md ${showSpinner ? "cursor-not-allowed":''}`}>Submit Code</button>
                 </div>
                   {

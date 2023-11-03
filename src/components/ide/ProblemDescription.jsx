@@ -17,18 +17,20 @@ function ProblemDescription({ question,obj,currTab,setCurrTab }) {
         <IdeMobileNavbar currTab={currTab}setCurrTab={setCurrTab} ></IdeMobileNavbar>
       </div>
       </div>
-      <div>Author : {author}</div>
-      <span className={`text-sm px-2 py-1 w-fit rounded-md ${difficulty}`}>{difficulty}</span>
-      <div className="font-medium">{description}</div>
+      <div className="text-sm text-gray-500">Author : {author}</div>
+      <span className={`text-sm px-3 w-fit rounded-xl ${difficulty}`}>{difficulty}</span>
+      <div className="font-medium mt-3 text-gray-700">{description}</div>
+<div className="mt-4">
       <div className="font-semibold">Sample input</div>
       <div>{sample}</div>
       <div className="font-semibold">Sample Output</div>
       <div>{sampleAnswer}</div>
-      <form className="w-full pr-3">
+      </div>
+      <form className="w-full pr-3 mt-2">
         <label htmlFor="custom-input">Custom Input</label>
         <textarea id="custom-Input" onChange={(e)=>{setCustomInput(e.target.value)}} className="p-2 block border min-h-[100px] w-[100%]" value={customInput}></textarea>
-        <label htmlFor="custom-output">Custom Output</label>
-        <div id="custom-output"  className="p-2 block border min-h-[100px] w-full" >{customOutput}</div>
+        <label htmlFor="custom-output" >Custom Output</label>
+        <div id="custom-output"  className="p-2 block border min-h-[100px] w-full  bg-white" >{customOutput}</div>
       </form>
     </div>
   ); 
