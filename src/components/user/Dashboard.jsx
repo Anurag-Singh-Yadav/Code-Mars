@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import Cookies from "js-cookie";
-
+import './dashboard/dashboard.css';
 import UserInfo from "./dashboard/UserInfo";
 import SolvedQuestions from "./dashboard/SolvedQuestions";
 import Rank from "./dashboard/Rank";
@@ -57,7 +57,7 @@ function Dashboard({ setIsLogin }) {
   return (
 
     <div className="bg-mainbg">
-      <div className="px-6 py-2 flex">
+      <div className="px-6 py-2 flex main-div-dashboard">
         <div className=" basis-1/3">
         <UserInfo
           userProfile={userProfile}
@@ -70,9 +70,9 @@ function Dashboard({ setIsLogin }) {
         ></UserInfo>
         </div>
 
-        <div className="shadow-[rgba(17,_17,_26,_0.1)_0px_0px_16px] p-3 basis-2/3">
-          <div className="flex w-full">
-            <div className="shadow-[rgba(50,50,93,0.25)_0px_6px_12px_-2px,_rgba(0,0,0,0.3)_0px_3px_7px_-3px] rounded-md w-[100vw] md:w-fit">
+        <div className="shadow-[rgba(17,_17,_26,_0.1)_0px_0px_16px] p-3 basis-2/3 ">
+          <div className="flex w-full right-div">
+            <div className="shadow-[rgba(50,50,93,0.25)_0px_6px_12px_-2px,_rgba(0,0,0,0.3)_0px_3px_7px_-3px] rounded-md pie-chart md:w-fit">
               <PieChart data={data}></PieChart>
             </div>
 
@@ -97,8 +97,6 @@ function Dashboard({ setIsLogin }) {
           </div>
         
         </div>
-
-       
 
       </div>
       <BottomFooter></BottomFooter>

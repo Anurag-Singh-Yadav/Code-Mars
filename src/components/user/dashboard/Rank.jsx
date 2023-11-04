@@ -5,8 +5,8 @@ import { CircularProgressbar } from 'react-circular-progressbar'
 function Rank({rank,totalUser}) {
   return (
     <div className="px-2">
-              <div className="text-center font-bold text-2xl bg-blue-200 py-2 rounded-full my-2">
-                Gloal ranking
+              <div className="text-center font-bold text-xs sm:text-2xl bg-blue-200 md:px-4 rounded-full my-2">
+                Global ranking
               </div>
               <div className="w-[60%] flex justify-center mx-auto my-4">
                 <CircularProgressbar
@@ -24,7 +24,7 @@ function Rank({rank,totalUser}) {
                   }}
                 />
               </div>
-              <div className="text-center font-bold text-2xl bg-blue-200 py-2 rounded-full">
+              <div className="text-center font-bold text-xs sm:text-2xl bg-blue-200 py-2 rounded-full">
                 Top: <span className="italic">{(rank/totalUser*100).toFixed(2)}%</span>
               </div>
 </div>

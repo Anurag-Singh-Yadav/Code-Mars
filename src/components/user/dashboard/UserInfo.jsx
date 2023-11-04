@@ -58,8 +58,10 @@ function UserInfo({
 
   return (
     <div className="shadow-[0px_4px_16px_rgba(17,17,26,0.1),_0px_8px_24px_rgba(17,17,26,0.1),_0px_16px_56px_rgba(17,17,26,0.1)] p-4">
-      <div className="justify-between mb-3 shadow-[0px_4px_16px_rgba(17,17,26,0.1),_0px_8px_24px_rgba(17,17,26,0.1),_0px_16px_56px_rgba(17,17,26,0.1)] rounded-md p-2">
-        <div className="flex jus items-center">
+      <div className="justify-between mb-3 md:shadow-[0px_4px_16px_rgba(17,17,26,0.1),_0px_8px_24px_rgba(17,17,26,0.1),_0px_16px_56px_rgba(17,17,26,0.1)] rounded-md p-2">
+
+        <div className="flex flex-col sm:flex-row justify-center gap-2 sm:gap-0 items-center">
+
           <Avatar
             onClick={() => {
               navigate(`/dashboard/${userHandle}`);
@@ -74,29 +76,35 @@ function UserInfo({
             <div className="underline italic text-navcolor cursor-pointer mb-2 ">
               {userHandle}
             </div>
+
           </div>
         </div>
+
         <div className="pr-5 font-medium">
           <Rank rank={rankNumber + 1} totalUser={totalUser}>
             {" "}
           </Rank>
         </div>
+
       </div>
 
       {isvalid && userHandle && (
         <div className="flex flex-col  gap-2 my-2  items-center bg-green-0 dark:bg-dark-green-0 text-green-s dark:text-dark-green-s hover:text-green-s dark:hover:text-dark-green-s w-full rounded-lg py-[7px] text-center font-medium">
+         
           <NavLink
             to={`/profile/${userHandle}/edit`}
             className="bg-[#90dc72dd] text-[2cbb5d] rounded-md hover:text-[] w-full shadow-[0px_4px_16px_rgba(17,17,26,0.1),_0px_8px_24px_rgba(17,17,26,0.1),_0px_16px_56px_rgba(17,17,26,0.1)] py-1 px-2"
           >
             Edit Profile
           </NavLink>
+
           <button
             className="shadow-[0px_4px_16px_rgba(17,17,26,0.1),_0px_8px_24px_rgba(17,17,26,0.1),_0px_16px_56px_rgba(17,17,26,0.1)] w-full px-4 py-1 rounded-md"
             onClick={logOutHandler}
           >
             Log Out
           </button>
+
         </div>
       )}
 
@@ -142,6 +150,7 @@ function UserInfo({
           <div>loading</div>
         )}
       </div>
+
     </div>
   );
 }

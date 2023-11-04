@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import PieChart from "./PieChart";
+import './dashboard.css';
 import CircularPercentageGraph from "./CircularPercentageGraph";
 import LineProgressTracker from "./LineProgressTracker";
 
@@ -22,12 +23,12 @@ function SolvedQuestions({ typeQuestion, total, totalData }) {
   }
 
   return (
-    <div className="items-center px-4 bg-navcolor text-white shadow-[rgba(50,50,93,0.25)_0px_6px_12px_-2px,_rgba(0,0,0,0.3)_0px_3px_7px_-3px] rounded-md py-6">
+    <div className="items-center w-full justify-between px-4 bg-navcolor SolvedQuestions text-white shadow-[rgba(50,50,93,0.25)_0px_6px_12px_-2px,_rgba(0,0,0,0.3)_0px_3px_7px_-3px] rounded-md py-8">
       <div className="">
         <CircularPercentageGraph percentage={percentage} />
       </div>
 
-      <div className="flex flex-wrap flex-col gap-1  justify-center items-start">
+      <div className="flex flex-wrap lg:w-full flex-col gap-1  justify-center items-start">
         <LineProgressTracker
           color={"#2cbb5d"}
           type={"Easy"}
