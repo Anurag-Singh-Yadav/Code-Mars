@@ -16,24 +16,24 @@ function Contact() {
               <li>
                 <span><FaMapMarkerAlt></FaMapMarkerAlt></span>
                 <span>
-                  184 Ippokratous Street<br />
-                  Athens, Gr<br />
-                  11472
+                MBH-A<br />
+                  NIT Jalandhar<br />
+                  Punjab
                 </span>
               </li>
               <li>
                 <span><MdEmail></MdEmail></span>
-                <span><a href="mailto:nassosanagn@gmail.com">Mail us</a></span>
+                <span><a href="mailto:anuragsinghyadav0005@gmail.com">Mail us</a></span>
               </li>
               <li>
                 <span><BiSolidPhoneCall></BiSolidPhoneCall></span>
-                <span>702-279-3488</span>
+                <span>9670123370</span>
               </li>
             </ul>
           </div>
           <ul className="sci">
-            <li><a href="https://twitter.com/nassosanagn"><BsTwitter></BsTwitter></a></li>
-            <li><a href="https://www.linkedin.com/in/nassos-anagnostopoulos-2b9631196/"><BsLinkedin></BsLinkedin></a></li>
+            <li><a href="https://twitter.com/iamAnurag0005"><BsTwitter></BsTwitter></a></li>
+            <li><a href="https://www.linkedin.com/in/anurag-singh-yadav-02686322b/"><BsLinkedin></BsLinkedin></a></li>
           </ul>
         </div>
         <div className="contactForm">
