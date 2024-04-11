@@ -25,10 +25,6 @@ function Contact() {
                 <span><MdEmail></MdEmail></span>
                 <span><a href="mailto:anuragsinghyadav0005@gmail.com">Mail us</a></span>
               </li>
-              <li>
-                <span><BiSolidPhoneCall></BiSolidPhoneCall></span>
-                <span>9670123370</span>
-              </li>
             </ul>
           </div>
           <ul className="sci">
